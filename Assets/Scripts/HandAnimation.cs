@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
 
 public class HandAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    XRInputValueReader<float> m_TriggerInput;
+    
+    [SerializeField]
+    XRInputValueReader<float> m_GridInput;
+    
+    [SerializeField] 
+    Animator animator;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        //Debug.Log("_TriggerInput.ReadValue() + " + " +" m_GridInput.ReadValue());
+        animator.SetFloat("Trigger", m_TriggerInput.ReadValue());
+        animator.SetFloat("Grid", m_GridInput.ReadValue());
     }
 }
