@@ -6,6 +6,8 @@ public class ArgrState : BaseState
     {
         Debug.Log("Enter agr");
         manager.SetSpeed(manager.walkSpeed);
+        manager.animator.SetBool("IsRunning", true);
+        manager.animator.SetBool("IsAttack", false);
     }
 
     public override void ExitState(EnemyStateManager manager)

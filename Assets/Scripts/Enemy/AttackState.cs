@@ -5,6 +5,7 @@ public class AttakState : BaseState
     public override void EnterState(EnemyStateManager manager)
     {
         manager.SetSpeed(0);
+        manager.animator.SetBool("IsAttack", true);
     }
 
     public override void ExitState(EnemyStateManager manager)
@@ -16,10 +17,10 @@ public class AttakState : BaseState
     {
         Debug.Log("Ataka!");
 
-        if (manager.DistanceToTarget() >= manager.attakDistanse)
-        {
-            manager.SwitchState(manager.argrState);
-            return;
-        }
+        // if (manager.DistanceToTarget() >= manager.attakDistanse)
+        // {
+        //     manager.SwitchState(manager.argrState);
+        //     return;
+        // }
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyStateManager : MonoBehaviour
 {
+    [SerializeField] public Animator animator;
     [SerializeField] private NavMeshAgent navMeshAgent;
     [SerializeField] private Transform player;
     [SerializeField] public float walkSpeed;
@@ -10,7 +11,7 @@ public class EnemyStateManager : MonoBehaviour
     [SerializeField] public float attakDistanse;
     private Transform target;
 
-    private BaseState currentState;
+    public BaseState currentState;
     public IdleState idleState;
     public ArgrState argrState;
     public AttakState attakState;
@@ -72,5 +73,17 @@ public class EnemyStateManager : MonoBehaviour
         }
         
         return Vector3.Distance(transform.position, target.position);
+    }
+
+    void CheckConditions()
+    {
+        if (currentState == attakState)
+        {
+            if (DistanceToTarget() >= attakDistanse)
+            {
+                SwitchState(argrState);
+                return;
+            }
+        }
     }
 }

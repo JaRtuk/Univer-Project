@@ -14,7 +14,6 @@ public class HandAnimation : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("_TriggerInput.ReadValue() + " + " +" m_GridInput.ReadValue());
         animator.SetFloat("Trigger", m_TriggerInput.ReadValue());
         animator.SetFloat("Grid", m_GridInput.ReadValue());
     }
