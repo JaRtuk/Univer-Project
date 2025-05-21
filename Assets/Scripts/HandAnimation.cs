@@ -7,7 +7,7 @@ public class HandAnimation : MonoBehaviour
     XRInputValueReader<float> m_TriggerInput;
     
     [SerializeField]
-    XRInputValueReader<float> m_GridInput;
+    XRInputValueReader<float> m_GripInput;
     
     [SerializeField] 
     Animator animator;
@@ -15,6 +15,6 @@ public class HandAnimation : MonoBehaviour
     private void Update()
     {
         animator.SetFloat("Trigger", m_TriggerInput.ReadValue());
-        animator.SetFloat("Grid", m_GridInput.ReadValue());
+        animator.SetFloat("Grip", m_GripInput.ReadValue());
     }
 }
