@@ -10,9 +10,9 @@ public class EmenyAmmo : MonoBehaviour
 
     void Update()
     {
-        if (manager.currentState == manager.attakState)
-        {
-            weapon.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-        }
+        // if (manager.currentState == manager.attakState)
+        // {
+        //     weapon.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+        // }
     }
 }
