@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("First_location");
+        SceneManager.LoadScene(1);
     }
 
     public void OpenSettings()

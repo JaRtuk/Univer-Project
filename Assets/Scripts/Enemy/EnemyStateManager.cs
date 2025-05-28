@@ -68,7 +68,6 @@ public class EnemyStateManager : MonoBehaviour
     {
         if (target == null) 
         {
-            Debug.LogError("Target is not assigned!");
             return Mathf.Infinity;
         }
         
