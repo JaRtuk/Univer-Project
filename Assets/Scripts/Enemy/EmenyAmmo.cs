@@ -8,6 +8,11 @@ public class EmenyAmmo : MonoBehaviour
     [SerializeField] public EnemyStateManager manager;
 
 
+    public EmenyAmmo()
+    {
+        weapon.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+    }
+
     void Update()
     {
         // if (manager.currentState == manager.attakState)
