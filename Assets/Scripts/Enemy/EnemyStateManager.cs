@@ -19,9 +19,9 @@ public class EnemyStateManager : MonoBehaviour
     private void Awake()
     {
         // Инициализация состояний
-        idleState = gameObject.AddComponent<IdleState>();
-        argrState = gameObject.AddComponent<ArgrState>();
-        attakState = gameObject.AddComponent<AttakState>();
+        // idleState = gameObject.AddComponent<IdleState>();
+        // argrState = gameObject.AddComponent<ArgrState>();
+        // attakState = gameObject.AddComponent<AttakState>();
     }
 
     public void SwitchState(BaseState newState)

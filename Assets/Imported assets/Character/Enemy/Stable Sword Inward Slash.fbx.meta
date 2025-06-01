@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2b57d78ba168034ca4d50580f5cee3d
+guid: 6d62f2e3f61f4e041bfaf0ad99ee8db9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -37,7 +37,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 156
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -56,28 +56,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.03448276
-        functionName: CanDamage
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 64875b27ce54ca94b9e591cc68c04c91, type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.92241377
-        functionName: CheckConditions
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 64875b27ce54ca94b9e591cc68c04c91, type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.97126436
-        functionName: CanDamage
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 64875b27ce54ca94b9e591cc68c04c91, type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
