@@ -15,6 +15,7 @@ public class EnemyStateManager : MonoBehaviour
     public IdleState idleState;
     public ArgrState argrState;
     public AttakState attakState;
+    public Damageable damageable;
 
     private void Awake()
     {
@@ -43,14 +44,24 @@ public class EnemyStateManager : MonoBehaviour
 
     private void Update()
     {
-        if (player != null)
-            SetDestination(player);
-            
-        if (navMeshAgent != null && target != null)
-            navMeshAgent.destination = target.position;
-            
-        if (currentState != null)
-            currentState.UpdateState(this);
+        if (damageable.GetHeelth() <= 0)
+        {
+            animator.SetBool("IsAlive", false);
+            SetSpeed(0);
+        }
+        else
+        {
+            CheckConditions();
+
+            if (player != null)
+                SetDestination(player);
+
+            if (navMeshAgent != null && target != null)
+                navMeshAgent.destination = target.position;
+
+            if (currentState != null)
+                currentState.UpdateState(this);
+        }
     }
 
     public void SetSpeed(float newSpeed)

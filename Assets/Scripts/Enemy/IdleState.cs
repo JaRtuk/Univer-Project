@@ -11,7 +11,6 @@ public class IdleState : BaseState
 
     public override void ExitState(EnemyStateManager manager)
     {
-        Debug.Log("Exited Idle");
     }
 
     public override void UpdateState(EnemyStateManager manager)
