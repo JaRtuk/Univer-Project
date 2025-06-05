@@ -107,13 +107,16 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        if (!GameResultData.IsSaved && GameResultData.LastRunTime > 0f)
+        if (leaderboardText != null)
         {
-            AddTimeToLeaderboard(GameResultData.LastRunTime);
-            GameResultData.IsSaved = true;
-        }
+            if (!GameResultData.IsSaved && GameResultData.LastRunTime > 0f)
+            {
+                AddTimeToLeaderboard(GameResultData.LastRunTime);
+                GameResultData.IsSaved = true;
+            }
 
-        DisplayLeaderboard();
+            DisplayLeaderboard();
+        }
     }
 
     void AddTimeToLeaderboard(float newTime)
